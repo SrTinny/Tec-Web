@@ -1,9 +1,11 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ffffff;
@@ -19,6 +21,7 @@ body {
   background-position: center;
 }
 
+/* Container */
 .container {
   max-width: 750px;
   margin: -120px auto 40px;
@@ -26,10 +29,11 @@ body {
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  z-index: 2;
   position: relative;
+  z-index: 2;
 }
 
+/* Profile */
 .profile-pic {
   width: 120px;
   height: 120px;
@@ -41,6 +45,7 @@ body {
   background-color: #fff;
 }
 
+/* Textos */
 h1 {
   font-size: 24px;
   font-weight: bold;
@@ -62,6 +67,7 @@ p {
   padding: 0 10px;
 }
 
+/* Tags */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -91,36 +97,7 @@ p {
   background-color: #333;
 }
 
-.buttons {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-.button-icon {
-  font-size: 22px;
-  text-decoration: none;
-  color: #1e1e1e;
-  transition: 0.3s;
-}
-
-.button-icon:hover {
-  transform: scale(1.15);
-}
-
-.whatsapp {
-  margin-top: 20px;
-  background-color: #007aff;
-  color: white;
-  padding: 12px 28px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-}
-
+/* Projetos */
 .projects-section {
   max-width: 800px;
   margin: 60px auto 30px;
@@ -169,6 +146,52 @@ p {
   transform: scale(1.05);
 }
 
+/* Botões */
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.button-icon img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.button-icon:hover img {
+  transform: scale(1.15);
+}
+
+.whatsapp {
+  margin-top: 20px;
+  background-color: #007aff;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* See More */
+.see-more {
+  display: inline-block;
+  margin-top: 20px;
+  color: #007aff;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.see-more:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
   background-color: #1e1e1e;
   color: #fff;
@@ -187,18 +210,3 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
-.see-more {
-    display: inline-block;
-    margin-top: 20px;
-    color: #007aff;
-    font-size: 14px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .see-more:hover {
-    text-decoration: underline;
-  }
-  
