@@ -3,227 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
     <title>João Victor Duarte</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #ffffff;
-        color: #1e1e1e;
-        text-align: center;
-      }
-
-      .wallpaper {
-        width: 100%;
-        height: 220px;
-        background-image: url("img/download.jpeg");
-        background-size: cover;
-        background-position: center;
-      }
-
-      .container {
-        max-width: 750px;
-        margin: -80px auto 40px;
-        padding: 40px 20px 30px;
-        background-color: #fff;
-        border-radius: 16px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-        z-index: 2;
-        position: relative;
-      }
-
-      .profile-pic {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 4px solid #fff;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        margin-top: -60px;
-        background-color: #fff;
-      }
-
-      h1 {
-        font-size: 24px;
-        font-weight: bold;
-        margin: 20px 0 5px;
-      }
-
-      .subtitle {
-        font-size: 13px;
-        color: #777;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-      }
-
-      p {
-        font-size: 15px;
-        line-height: 1.6;
-        margin-bottom: 12px;
-        padding: 0 10px;
-      }
-
-      .tags {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin: 30px 0;
-      }
-
-      .tag {
-        background-color: #1e1e1e;
-        color: white;
-        padding: 8px 14px;
-        border-radius: 20px;
-        font-size: 13px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        transition: 0.2s ease;
-      }
-
-      .tag img {
-        width: 16px;
-        height: 16px;
-      }
-
-      .tag:hover {
-        background-color: #333;
-      }
-
-      .buttons {
-        margin-top: 25px;
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        flex-wrap: wrap;
-      }
-
-      .button-icon {
-        font-size: 22px;
-        text-decoration: none;
-        color: #1e1e1e;
-        transition: 0.3s;
-      }
-
-      .button-icon:hover {
-        transform: scale(1.15);
-      }
-
-      .whatsapp {
-        margin-top: 20px;
-        background-color: #007aff;
-        color: white;
-        padding: 12px 28px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        display: inline-block;
-      }
-
-      .projects-section {
-        max-width: 800px;
-        margin: 60px auto 30px;
-        padding: 0 20px;
-        text-align: center;
-      }
-
-      .projects-section h2 {
-        font-size: 24px;
-        margin-bottom: 30px;
-        color: #007aff;
-      }
-
-      .project-category {
-        margin-bottom: 40px;
-      }
-
-      .project-category h3 {
-        color: #007aff;
-        margin-bottom: 16px;
-        font-size: 18px;
-      }
-
-      .project-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-      }
-
-      .project-card {
-        background-color: #007aff;
-        color: white;
-        padding: 20px;
-        border-radius: 2px;
-        width: 210px;
-        height: 120px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        transition: transform 0.3s ease;
-      }
-
-      .project-card:hover {
-        transform: scale(1.05);
-      }
-
-      /* Responsivo */
-      @media (max-width: 768px) {
-        
-      }
-
-      /* MOBILE RESPONSIVO */
-      @media (max-width: 768px) {
-        .container {
-          margin: -60px 10px 30px;
-          padding: 30px 15px;
-        }
-
-        .profile-pic {
-          width: 100px;
-          height: 100px;
-          margin-top: -50px;
-        }
-
-        h1 {
-          font-size: 22px;
-        }
-
-        .tag {
-          width: auto;
-          max-width: 240px;
-          justify-content: center;
-          font-size: 14px;
-          margin: auto;
-        }
-
-        .tags {
-          gap: 8px;
-        }
-
-        .buttons {
-          gap: 18px;
-        }
-
-        .whatsapp {
-          padding: 10px 20px;
-          font-size: 14px;
-        }
-
-        .project-card {
-          width: 90%;
-        }
-      }
-    </style>
   </head>
   <body>
     <div class="wallpaper"></div>
@@ -365,28 +147,72 @@
         <div class="project-category">
           <h3>Móveis Planejados</h3>
           <div class="project-grid">
-            <div class="project-card"><img src="img/Enscape_2025-04-24-15-07-58.png" width="200px" height="110px" alt=""></div>
-            <div class="project-card"><img src="img/Enscape_2025-04-25-02-50-05.png" width="200px" height="110px" alt=""></div>
-            <div class="project-card"><img src="img/Enscape_2025-04-25-15-34-40.png" width="200px" height="110px" alt=""></div>
+            <div class="project-card">
+              <img
+                src="img/Enscape_2025-04-24-15-07-58.png"
+                alt="Projeto" style="width: 100%; height: auto;"
+              />
+            </div>
+            <div class="project-card">
+              <img
+                src="img/Enscape_2025-04-25-02-50-05.png"
+                alt="Projeto" style="width: 100%; height: auto;"
+              />
+            </div>
+            <div class="project-card">
+              <img
+                src="img/Enscape_2025-04-25-15-34-40.png"
+                alt="Projeto" style="width: 100%; height: auto;"
+              />
+            </div>
           </div>
         </div>
 
         <div class="project-category">
           <h3>Sites</h3>
           <div class="project-grid">
-            <link rel="stylesheet" href="https://vercel.com/srtinnys-projects/devhub">
-            <div class="project-card"><img src="img/Captura de tela 2025-04-25 233007.png" width="200px" height="110px" alt=""></div>
-            <div class="project-card"><img src="img/Captura de tela 2025-04-25 233207.png" width="200px" height="110px" alt=""></div>
-            <div class="project-card"><img src="img/Captura de tela 2025-04-25 233303.png" width="200px" height="110px" alt=""></div>
+            <div class="project-card">
+              <img
+                src="img/Captura de tela 2025-04-25 233007.png"
+                alt="Projeto" style="width: 100%; height: auto;"
+              />
+            </div>
+            <div class="project-card">
+              <img
+                src="img/Captura de tela 2025-04-25 233207.png"
+                alt="Projeto" style="width: 100%; height: auto;"
+              />
+            </div>
+            <div class="project-card">
+              <img
+                src="img/Captura de tela 2025-04-25 233303.png"
+                alt="Projeto" style="width: 100%; height: auto;"
+              />
+            </div>
           </div>
         </div>
 
         <div class="project-category">
           <h3>Impressões 3D</h3>
           <div class="project-grid">
-            <div class="project-card"><img src="img/ChatGPT Image 25 de abr. de 2025, 23_43_50.png" width="200px" height="110px" alt=""></div>
-            <div class="project-card"><img src="img/ChatGPT Image 25 de abr. de 2025, 23_47_11.png" width="200px" height="110px" alt=""></div>
-            <div class="project-card"><img src="img/ChatGPT Image 25 de abr. de 2025, 23_48_52.png" width="200px" height="110px" alt=""></div>
+            <div class="project-card">
+              <img
+                src="img/ChatGPT Image 26 de abr. de 2025, 00_11_53.png"
+                alt="Projeto" style="width: 100%; height: auto;"
+              />
+            </div>
+            <div class="project-card">
+              <img
+                src="img/ChatGPT Image 26 de abr. de 2025, 00_14_03.png"
+                alt="Projeto" style="width: 100%; height: auto;"
+              />
+            </div>
+            <div class="project-card">
+              <img
+                src="img/ChatGPT Image 26 de abr. de 2025, 12_04_15.png"
+                alt="Projeto" style="width: 100%; height: auto;"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -406,5 +232,10 @@
         Contate no WhatsApp
       </a>
     </div>
+
+    <footer>
+      © 2025 João Victor Duarte · Desenvolvedor e Criador · <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    </footer>
+    
   </body>
 </html>
