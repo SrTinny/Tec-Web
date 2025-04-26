@@ -3,104 +3,407 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minha Página Pessoal</title>
+    <title>João Victor Duarte</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
-        font-family: Arial, sans-serif;
-        max-width: 900px;
-        margin: 50px auto;
-        padding: 20px;
-        background-color: #f5f5f5;
-        border-radius: 10px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .wallpaper {
+        width: 100%;
+        height: 220px;
+        background-image: url("img/download.jpeg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .container {
+        max-width: 750px;
+        margin: -80px auto 40px;
+        padding: 40px 20px 30px;
+        background-color: #fff;
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+        position: relative;
+      }
+
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        margin-top: -60px;
+        background-color: #fff;
       }
 
       h1 {
-        color: #333;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0 5px;
+      }
+
+      .subtitle {
+        font-size: 13px;
+        color: #777;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
       }
 
       p {
+        font-size: 15px;
         line-height: 1.6;
+        margin-bottom: 12px;
+        padding: 0 10px;
       }
 
-      ul {
-        list-style: square;
-        padding-left: 20px;
-      }
-
-      /* Estilo para as tags de tecnologias */
       .tags {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
-        margin-top: 20px;
+        margin: 30px 0;
       }
 
       .tag {
         background-color: #1e1e1e;
         color: white;
-        border-radius: 8px;
-        padding: 8px 16px;
-        font-size: 14px;
-        border: 1px solid #444;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        transition: 0.3s;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: 0.2s ease;
+      }
+
+      .tag img {
+        width: 16px;
+        height: 16px;
       }
 
       .tag:hover {
         background-color: #333;
+      }
+
+      .buttons {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+
+      .button-icon {
+        font-size: 22px;
+        text-decoration: none;
+        color: #1e1e1e;
+        transition: 0.3s;
+      }
+
+      .button-icon:hover {
+        transform: scale(1.15);
+      }
+
+      .whatsapp {
+        margin-top: 20px;
+        background-color: #007aff;
+        color: white;
+        padding: 12px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+      }
+
+      .projects-section {
+        max-width: 800px;
+        margin: 60px auto 30px;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      .projects-section h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+        color: #007aff;
+      }
+
+      .project-category {
+        margin-bottom: 40px;
+      }
+
+      .project-category h3 {
+        color: #007aff;
+        margin-bottom: 16px;
+        font-size: 18px;
+      }
+
+      .project-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .project-card {
+        background-color: #007aff;
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        width: 200px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+      }
+
+      .project-card:hover {
         transform: scale(1.05);
+      }
+
+      /* Responsivo */
+      @media (max-width: 768px) {
+        
+      }
+
+      /* MOBILE RESPONSIVO */
+      @media (max-width: 768px) {
+        .container {
+          margin: -60px 10px 30px;
+          padding: 30px 15px;
+        }
+
+        .profile-pic {
+          width: 100px;
+          height: 100px;
+          margin-top: -50px;
+        }
+
+        h1 {
+          font-size: 22px;
+        }
+
+        .tag {
+          width: auto;
+          max-width: 240px;
+          justify-content: center;
+          font-size: 14px;
+          margin: auto;
+        }
+
+        .tags {
+          gap: 8px;
+        }
+
+        .buttons {
+          gap: 18px;
+        }
+
+        .whatsapp {
+          padding: 10px 20px;
+          font-size: 14px;
+        }
+
+        .project-card {
+          width: 90%;
+        }
       }
     </style>
   </head>
   <body>
-    <h1>Muito prazer, <br />sou João Victor Duarte</h1>
+    <div class="wallpaper"></div>
 
-    <h2>💼 Expertises</h2>
-    <!-- TAGS DAS TECNOLOGIAS -->
-    <div class="tags">
-      <div class="tag">Java</div>
-      <div class="tag">Git</div>
-      <div class="tag">React</div>
-      <div class="tag">PHP</div>
-      <div class="tag">SQL</div>
-      <div class="tag">Node.js</div>
-      <div class="tag">Bootstrap</div>
-      <div class="tag">JavaScript</div>
-      <div class="tag">C</div>
-      <div class="tag">Python</div>
-      <div class="tag">HTML5</div>
-      <div class="tag">CSS3</div>
-      <div class="tag">TypeScript</div>
-      <div class="tag">Angular</div>
-      <div class="tag">MongoDB</div>
-      <div class="tag">Express.js</div>
-      <div class="tag">Docker</div>
+    <div class="container">
+      <img
+        class="profile-pic"
+        src="img/perfil.jpg"
+        alt="Foto de João Victor Duarte"
+      />
+
+      <h1>João Victor Duarte</h1>
+      <div class="subtitle">Desenvolvedor | Modelador 3D | Criador</div>
+
+      <p>
+        Sou apaixonado por arte, basquete e tecnologia. Atuo na área de
+        desenvolvimento com foco em soluções criativas e funcionais, além de
+        possuir conhecimentos em modelagem e projetos com ferramentas como
+        AutoCAD e SketchUp.
+      </p>
+      <p>
+        Participei de projetos acadêmicos relevantes como a "Biblioteca COVID" e
+        o portal "FormaMus", ambos vinculados à Universidade Federal do Ceará
+        (UFC), demonstrando minha capacidade técnica e senso de inovação.
+      </p>
+      <p>
+        Estou sempre aberto a novos aprendizados, tecnologias e desafios que
+        ampliem minha visão e habilidades no universo digital.
+      </p>
+
+      <div class="tags">
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            alt="JS"
+          />JavaScript
+        </div>
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+            alt="Java"
+          />Java
+        </div>
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+            alt="React"
+          />React
+        </div>
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+            alt="Node.js"
+          />Node.js
+        </div>
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+            alt="MongoDB"
+          />MongoDB
+        </div>
+        <div class="tag">
+          <img
+            src="https://img.icons8.com/fluency/48/autocad.png"
+            alt="AutoCAD"
+          />AutoCAD
+        </div>
+        <div class="tag">
+          <img
+            src="https://img.icons8.com/fluency/48/sketchup.png"
+            alt="SketchUp"
+          />SketchUp
+        </div>
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+            alt="Python"
+          />Python
+        </div>
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            alt="HTML"
+          />HTML
+        </div>
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            alt="CSS"
+          />CSS
+        </div>
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            alt="TypeScript"
+          />TypeScript
+        </div>
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+            alt="Git"
+          />Git
+        </div>
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+            alt="Docker"
+          />Docker
+        </div>
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+            alt="PHP"
+          />PHP
+        </div>
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+            alt="SQL"
+          />SQL
+        </div>
+        <div class="tag">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+            alt="Angular"
+          />Angular
+        </div>
+        <div class="tag">
+          <img
+            src="https://img.icons8.com/fluency/48/express-js.png"
+            alt="Express"
+          />Express.js
+        </div>
+      </div>
+
+      <div class="projects-section">
+        <h2>🛠️ Meus Projetos</h2>
+
+        <div class="project-category">
+          <h3>Móveis Planejados</h3>
+          <div class="project-grid">
+            <div class="project-card">Projeto 1</div>
+            <div class="project-card">Projeto 2</div>
+            <div class="project-card">Projeto 3</div>
+          </div>
+        </div>
+
+        <div class="project-category">
+          <h3>Sites</h3>
+          <div class="project-grid">
+            <div class="project-card">Site 1</div>
+            <div class="project-card">Site 2</div>
+            <div class="project-card">Site 3</div>
+          </div>
+        </div>
+
+        <div class="project-category">
+          <h3>Impressões 3D</h3>
+          <div class="project-grid">
+            <div class="project-card">Impressão 1</div>
+            <div class="project-card">Impressão 2</div>
+            <div class="project-card">Impressão 3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a class="button-icon" href="https://www.instagram.com" target="_blank"
+          >📷</a
+        >
+        <a class="button-icon" href="mailto:seuemail@email.com">✉️</a>
+      </div>
+
+      <a
+        class="whatsapp"
+        href="https://wa.me/seunumerowhatsapp"
+        target="_blank"
+      >
+        Contate no WhatsApp
+      </a>
     </div>
-
-    <h2>👤 Sobre Mim</h2>
-    <p>
-      Sou um profissional versátil com uma paixão profunda por arte, basquete e
-      tecnologia, atualmente concentrado em meus estudos de computação. Minha
-      experiência abrange uma série de linguagens. Tenho uma
-      habilidade inata para me adaptar rapidamente a várias ferramentas de
-      desenvolvimento, demonstrando minha capacidade de enfrentar desafios
-      impostos pelo trabalho.
-    </p>
-    <p>
-      Minha carreira também é marcada por conquistas notáveis no campo do
-      desenvolvimento web. Desenvolvi projetos significativos, como a plataforma
-      vinculada à Universidade Federal do Ceará (UFC), como a biblioteca virtual
-      "bibliotecacovid.ufc.br" e o portal "formamus.sobral.ufc.br". Esses
-      empreendimentos demonstram minha capacidade de criar soluções inovadoras e
-      colaborativas, sempre com foco na excelência e na constante evolução.
-    </p>
-    <p>
-      Tenho uma abordagem orientada à aprendizagem contínua e à busca constante
-      pela excelência. Acredito que a melhoria contínua é fundamental para
-      acompanhar o ritmo acelerado das tecnologias emergentes. Sempre estou
-      aberto a assumir novos desafios e aprender novas linguagens, frameworks e
-      metodologias para impulsionar meu conhecimento e aprimorar minha
-      contribuição para a equipe.
-    </p>
   </body>
 </html>
