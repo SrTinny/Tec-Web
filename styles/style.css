@@ -21,7 +21,7 @@ body {
 
 .container {
   max-width: 750px;
-  margin: -80px auto 40px;
+  margin: -120px auto 40px;
   padding: 40px 20px 30px;
   background-color: #fff;
   border-radius: 16px;
@@ -187,3 +187,18 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+.see-more {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007aff;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .see-more:hover {
+    text-decoration: underline;
+  }
+  
