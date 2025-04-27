@@ -220,3 +220,45 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+/* NOVA CLASSE para o título das seções */
+.section-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 50px 0 30px;
+  color: #007aff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Atualizar estilo dos h1, h2, h3 */
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  color: #1e1e1e;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #007aff;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 22px;
+  color: #007aff;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Pequeno ajuste na seção projetos */
+.projects-section {
+  margin-top: 80px;
+}
