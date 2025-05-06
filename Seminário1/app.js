@@ -1,4 +1,4 @@
-const readline = require('readline');
+const readline = require('readline'); // Importa o módulo readline para entrada de dados
 const {
     adicionarTarefa,
     listarTarefas,

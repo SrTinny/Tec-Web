@@ -1,14 +1,14 @@
-const fs = require('fs');
-const path = require('path');
-const { formatarData } = require('./utils');
+const fs = require('fs'); //manipula arquivos
+const path = require('path'); //lida com caminhos de arquivos
+const { formatarData } = require('./utils'); // Importa a função de formatação de formatarData
 
-const caminhoArquivo = path.join(__dirname, 'tarefas.json');
+const caminhoArquivo = path.join(__dirname, 'tarefas.json'); // Define o caminho do arquivo json
 
 // Carrega as tarefas do arquivo
 function carregarTarefas() {
-    if (!fs.existsSync(caminhoArquivo)) return [];
-    const dados = fs.readFileSync(caminhoArquivo);
-    return JSON.parse(dados);
+    if (!fs.existsSync(caminhoArquivo)) return []; // Verifica se o arquivo existe
+    const dados = fs.readFileSync(caminhoArquivo); // Lê o arquivo
+    return JSON.parse(dados); // Converte os dados para um objeto JavaScript
 }
 
 // Salva tarefas no arquivo
@@ -19,7 +19,7 @@ function salvarTarefas(tarefas) {
 function adicionarTarefa(descricao) {
     const tarefas = carregarTarefas();
     tarefas.push({
-        id: Date.now(),
+        id: Date.now(), //  Gera um ID único baseado no timestamp
         descricao,
         concluida: false,
         criadaEm: formatarData(new Date())
@@ -41,7 +41,7 @@ function listarTarefas(filtro = '') {
 
 function removerTarefa(id) {
     let tarefas = carregarTarefas();
-    tarefas = tarefas.filter(t => t.id != id);
+    tarefas = tarefas.filter(t => t.id != id); // Filtra as tarefas, removendo a com o ID fornecido
     salvarTarefas(tarefas);
     console.log("🗑️ Tarefa removida!");
 }
@@ -50,7 +50,8 @@ function marcarConcluida(id) {
     const tarefas = carregarTarefas();
     const index = tarefas.findIndex(t => t.id == id);
     if (index !== -1) {
-        tarefas[index].concluida = true;
+        tarefas[index].concluida = true; // Marca a tarefa como concluída
+        tarefas[index].concluidaEm = formatarData(new Date()); // Adiciona a data de conclusão 
         salvarTarefas(tarefas);
         console.log("✅ Tarefa marcada como concluída!");
     } else {
